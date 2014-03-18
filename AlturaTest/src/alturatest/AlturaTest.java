@@ -19,4 +19,8 @@ public class AlturaTest {
         // TODO code application logic here
     }
     
+    public static void newTerminal(javax.swing.JTextField serialNum, javax.swing.JTextField pimsNum, javax.swing.JTextField location, int test4, javax.swing.JTextField condition) {
+        
+    }
+    
 }

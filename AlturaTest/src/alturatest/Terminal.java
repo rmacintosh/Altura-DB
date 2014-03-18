@@ -12,22 +12,21 @@ package alturatest;
 public class Terminal {
     
     // Public member vars
-    public static final int maxFails = 10;
+    public static final int maxFails          = 10;
+    public static final int CONDITION_SCRAP   = 3;
+    public static final int CONDITION_GOOD    = 2;
+    public static final int CONDITION_BAD     = 1;
+    public static final int CONDITION_UNKNOWN = 1;
     
     // Private member vars
-    private static final int CONDITION_SCRAP   = 3;
-    private static final int CONDITION_GOOD    = 2;
-    private static final int CONDITION_BAD     = 1;
-    private static final int CONDITION_UNKNOWN = 1;
     private static final int row               = 10;
     private static final int col               = 2;
-    
-    private int         condition;
-    private int         numFails;
-    private long        serialNum;
-    private long        pimsNum;
-    private String      location;
-    private String[][]  pastRepairs;
+    private int              condition;
+    private int              numFails;
+    private long             serialNum;
+    private long             pimsNum;
+    private String           location;
+    private String[][]       pastRepairs;
         
     // Public Methods
     public Terminal() {
