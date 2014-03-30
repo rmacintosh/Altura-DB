@@ -27,13 +27,13 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jScrollPane1" max="32767" attributes="0"/>
-                  <Component id="jButton3" max="32767" attributes="0"/>
-                  <Component id="jButton4" max="32767" attributes="0"/>
-                  <Component id="jButton5" max="32767" attributes="0"/>
-                  <Component id="jButton6" max="32767" attributes="0"/>
-                  <Component id="jButton7" max="32767" attributes="0"/>
-                  <Component id="jButton8" max="32767" attributes="0"/>
-                  <Component id="jButton9" alignment="1" max="32767" attributes="0"/>
+                  <Component id="setQualityBad" max="32767" attributes="0"/>
+                  <Component id="setQualityScrap" max="32767" attributes="0"/>
+                  <Component id="shipTerminal" max="32767" attributes="0"/>
+                  <Component id="receiveShipment" max="32767" attributes="0"/>
+                  <Component id="repairTerminal" max="32767" attributes="0"/>
+                  <Component id="editFault" max="32767" attributes="0"/>
+                  <Component id="deleteTerminal" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -55,19 +55,19 @@
               <EmptySpace type="separate" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="setQualityBad" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="setQualityScrap" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                      <Component id="shipTerminal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                      <Component id="receiveShipment" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                      <Component id="repairTerminal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                      <Component id="editFault" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton9" min="-2" max="-2" attributes="0"/>
+                      <Component id="deleteTerminal" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jPanel1" max="32767" attributes="0"/>
               </Group>
@@ -84,7 +84,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JList" name="jList1">
+        <Component class="javax.swing.JList" name="terminalList">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -297,14 +297,14 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jTextField2" max="32767" attributes="0"/>
-                              <Component id="jTextField3" max="32767" attributes="0"/>
-                              <Component id="jTextField1" max="32767" attributes="0"/>
-                              <Component id="jTextField4" max="32767" attributes="0"/>
+                              <Component id="pimsNumDisplay" max="32767" attributes="0"/>
+                              <Component id="conditionDisplay" max="32767" attributes="0"/>
+                              <Component id="serialNumDisplay" max="32767" attributes="0"/>
+                              <Component id="locationDisplay" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton2" max="32767" attributes="0"/>
+                              <Component id="viewFaults" max="32767" attributes="0"/>
                               <Component id="jPanel3" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -322,12 +322,12 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="serialNumDisplay" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="pimsNumDisplay" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
@@ -337,15 +337,15 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
+                              <Component id="conditionDisplay" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="locationDisplay" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jButton2" max="32767" attributes="0"/>
+                      <Component id="viewFaults" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jScrollPane2" pref="63" max="32767" attributes="0"/>
@@ -370,17 +370,17 @@
             <Property name="text" type="java.lang.String" value="Condition - "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="serialNumDisplay">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="pimsNumDisplay">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="conditionDisplay">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
@@ -390,7 +390,7 @@
             <Property name="text" type="java.lang.String" value="Location - "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="locationDisplay">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
@@ -409,19 +409,19 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel6" max="32767" attributes="0"/>
+                      <Component id="numFailures" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel6" alignment="0" pref="38" max="32767" attributes="0"/>
+                  <Component id="numFailures" alignment="0" pref="38" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="numFailures">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="18" style="0"/>
@@ -432,7 +432,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="viewFaults">
           <Properties>
             <Property name="text" type="java.lang.String" value="View Faults"/>
           </Properties>
@@ -444,7 +444,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" name="faultsDisplay">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -454,37 +454,37 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="setQualityBad">
       <Properties>
         <Property name="text" type="java.lang.String" value="Change Quality to Bad"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="setQualityScrap">
       <Properties>
         <Property name="text" type="java.lang.String" value="Scrap Terminal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="shipTerminal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ship Terminal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="receiveShipment">
       <Properties>
         <Property name="text" type="java.lang.String" value="Receive Shipment"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton7">
+    <Component class="javax.swing.JButton" name="repairTerminal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Repair Terminal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton8">
+    <Component class="javax.swing.JButton" name="editFault">
       <Properties>
         <Property name="text" type="java.lang.String" value="Change Fault Description"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton9">
+    <Component class="javax.swing.JButton" name="deleteTerminal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Delete Terminal"/>
       </Properties>
