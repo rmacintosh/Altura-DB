@@ -6,6 +6,8 @@
 
 package alturatest;
 
+import java.awt.Color;
+
 /**
  *
  * @author Macintosh
@@ -69,7 +71,7 @@ public class AlturaJFrame extends javax.swing.JFrame {
 
         terminalList.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         terminalList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "None" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -85,8 +87,9 @@ public class AlturaJFrame extends javax.swing.JFrame {
         });
 
         saveTerminal.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        saveTerminal.setForeground(new java.awt.Color(0, 102, 51));
+        saveTerminal.setForeground(new java.awt.Color(102, 102, 102));
         saveTerminal.setText("Save");
+        saveTerminal.setEnabled(false);
         saveTerminal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveTerminalActionPerformed(evt);
@@ -101,21 +104,19 @@ public class AlturaJFrame extends javax.swing.JFrame {
 
         jLabel10.setText("Location - ");
 
-        condition.setText("jTextField1");
         condition.setEnabled(false);
 
-        location.setText("jTextField1");
         location.setEnabled(false);
 
-        pimsNum.setText("jTextField1");
         pimsNum.setEnabled(false);
 
-        serialNum.setText("jTextField1");
         serialNum.setEnabled(false);
 
         generateSerial.setText("Generate");
+        generateSerial.setEnabled(false);
 
         generatePims.setText("Generate");
+        generatePims.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -187,15 +188,7 @@ public class AlturaJFrame extends javax.swing.JFrame {
 
         jLabel4.setText("Condition - ");
 
-        serialNumDisplay.setText("jTextField1");
-
-        pimsNumDisplay.setText("jTextField1");
-
-        conditionDisplay.setText("jTextField1");
-
         jLabel5.setText("Location - ");
-
-        locationDisplay.setText("jTextField1");
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("# of failures"));
 
@@ -358,8 +351,10 @@ public class AlturaJFrame extends javax.swing.JFrame {
                 generateSerial.setEnabled(true);
             if(!generatePims.isEnabled())
                 generatePims.setEnabled(true);
-            if(!saveTerminal.isEnabled())
+            if(!saveTerminal.isEnabled()) {
                 saveTerminal.setEnabled(true);
+                saveTerminal.setForeground(new Color(0,102,30));
+            }
         } else {
             if(serialNum.isEnabled())
                 serialNum.setEnabled(false);
@@ -373,8 +368,10 @@ public class AlturaJFrame extends javax.swing.JFrame {
                 generateSerial.setEnabled(false);
             if(generatePims.isEnabled())
                 generatePims.setEnabled(false);
-            if(saveTerminal.isEnabled())
+            if(saveTerminal.isEnabled()) {
                 saveTerminal.setEnabled(false);
+                saveTerminal.setForeground(new Color(102,102,102));
+            }
         }
     }//GEN-LAST:event_addNewTerminalActionPerformed
 
