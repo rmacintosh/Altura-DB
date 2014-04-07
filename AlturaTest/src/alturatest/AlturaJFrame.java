@@ -14,6 +14,8 @@ import java.awt.Color;
  */
 public class AlturaJFrame extends javax.swing.JFrame {
 
+    private Terminal[] terminalDB;
+    
     /**
      * Creates new form AlturaJFrame
      */
@@ -74,6 +76,11 @@ public class AlturaJFrame extends javax.swing.JFrame {
             String[] strings = { "None" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
+        });
+        terminalList.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                terminalListValueChanged(evt);
+            }
         });
         jScrollPane1.setViewportView(terminalList);
 
@@ -356,6 +363,10 @@ public class AlturaJFrame extends javax.swing.JFrame {
                 saveTerminal.setForeground(new Color(0,102,30));
             }
         } else {
+            serialNum.setText(null);
+            pimsNum.setText(null);
+            condition.setText(null);
+            location.setText(null);
             if(serialNum.isEnabled())
                 serialNum.setEnabled(false);
             if(pimsNum.isEnabled())
@@ -378,6 +389,12 @@ public class AlturaJFrame extends javax.swing.JFrame {
     private void saveTerminalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveTerminalActionPerformed
         AlturaTest.newTerminal(this.serialNum, this.pimsNum, this.location, 0, this.condition);
     }//GEN-LAST:event_saveTerminalActionPerformed
+
+    private void terminalListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_terminalListValueChanged
+        if(terminalList.getSelectedIndex() != -1) {
+            Object myVal = terminalList.getSelectedValue();
+        }
+    }//GEN-LAST:event_terminalListValueChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton addNewTerminal;
@@ -414,7 +431,7 @@ public class AlturaJFrame extends javax.swing.JFrame {
     private javax.swing.JButton setQualityBad;
     private javax.swing.JButton setQualityScrap;
     private javax.swing.JButton shipTerminal;
-    private javax.swing.JList terminalList;
+    protected javax.swing.JList terminalList;
     private javax.swing.JButton viewFaults;
     // End of variables declaration//GEN-END:variables
 }
